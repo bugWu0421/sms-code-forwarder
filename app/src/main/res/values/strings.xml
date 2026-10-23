@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">短信验证码转发</string>
+
+    <string name="btn_perm">① 授权短信权限</string>
+    <string name="btn_battery">② 加入电池优化白名单（强烈推荐）</string>
+    <string name="btn_keep_alive">③ 允许自启动/后台运行（国产手机必做，否则息屏后不转发）</string>
+
+    <string name="section_target">④ 转发目标（二选一）</string>
+    <string name="rb_feishu">飞书机器人（免费，无需服务器）</string>
+    <string name="rb_custom">自定义接口（POST JSON）</string>
+
+    <string name="hint_url">Webhook / 接口地址</string>
+    <string name="hint_secret">密钥（选填）</string>
+
+    <string name="sw_only_code">仅转发验证码类短信（关闭则转发所有短信）</string>
+    <string name="sw_enabled">总开关（开启后收到短信才会转发）</string>
+
+    <string name="btn_save">保存设置</string>
+    <string name="btn_test">发送测试</string>
+
+    <string name="section_status">最近一次转发结果</string>
+
+    <string name="help_text">使用说明：
+\n· 飞书模式：建一个飞书群 → 群设置 → 群机器人 → 添加「自定义机器人」→ 把 Webhook 地址粘贴到上面；若开启了「签名校验」，把密钥填到密钥框。
+\n· 自定义接口模式：App 会 POST 一段 JSON（含 from / code / body / receivedAt 等字段）；密钥非空时请求头带 Authorization: Bearer 密钥，建议服务端校验。
+\n· 国产手机（小米/华为/OPPO/vivo 等）还需在系统设置里：允许自启动、省电策略设为「无限制」、最近任务里锁定后台。
+\n· 千万不要用「强制停止」关闭本应用，强停后系统不再派发短信广播，需重新打开 App。
+\n· 验证码属于敏感信息，请只转发到自己控制的接口/群，不要泄露 Webhook 地址和密钥。</string>
+</resources>
