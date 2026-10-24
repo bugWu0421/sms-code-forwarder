@@ -29,14 +29,16 @@
 
 ## 构建
 
-需要 JDK 17+（项目含 Gradle Wrapper，无需预装 Gradle）：
+普通用户直接到 [Releases](https://github.com/bugWu0421/sms-code-forwarder/releases) 下载最新 APK 安装（debug 签名）。
+
+自行构建需要 JDK 17+（项目含 Gradle Wrapper，无需预装 Gradle）：
 
 ```bash
 ./gradlew assembleDebug
 adb install app/build/outputs/apk/debug/app-debug.apk
 ```
 
-或用 Android Studio 打开直接编译。仓库每次 push 会由 GitHub Actions 自动构建 APK（Actions → Build APK → Artifacts 下载）。
+或用 Android Studio 打开直接编译。仓库每次 push 会由 GitHub Actions 自动构建 APK（Actions → Build APK → Artifacts 下载）；打 `v*` 标签会自动创建 Release 并附上 APK。
 
 ## 各品牌手机必做设置（v1.4 自动跳转）
 
