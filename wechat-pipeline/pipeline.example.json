@@ -1,0 +1,15 @@
+{
+  "chatlog_dir": "~/tools/wechat-chatlog",
+  "wx_account": "",
+  "topic_dir": "~/wechat-chatlog-output/mining",
+  "brief_dir": "~/wechat-chatlog-output/daily",
+  "rules_file": "",
+  "recording_dir": "",
+  "lark_mcp_bin": "",
+  "exclude_pat": "家人|家庭|亲戚",
+  "identity_patterns": [
+    ["工作", "项目|客户|工作|公司|团队"],
+    ["副业", "店铺|订单|发货|进货"]
+  ],
+  "identity_order": []
+}

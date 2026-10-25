@@ -2,7 +2,11 @@
 
 把安卓手机新收到的**验证码短信**实时转发到 **飞书群机器人**（推荐，免费无需服务器）或**你自己的 HTTP 接口**。副机收验证码、主业手机/电脑秒收的场景而生。
 
-[English](README_EN.md) · [使用手册](docs/App使用手册.md) · [飞书接入手册](docs/飞书接入手册.md) · [隐私说明](PRIVACY.md) · [更新日志](CHANGELOG.md)
+> **本仓库包含两个独立组件**
+> - **SmsCodeForwarder**（Android App，本 README）—— 验证码短信实时转发
+> - **[wechat-pipeline/](wechat-pipeline/README.md)**（macOS 脚本）—— 微信聊天记录夜间流水线：每天凌晨自动拉快照 → 按身份分组挖掘（对方提问/待办线索）→ 生成每日简报 → 可选飞书推送。全程离线，个人规则放 `pipeline.local.json` 不进 Git
+
+[English](README_EN.md) · [使用手册](docs/App使用手册.md) · [飞书接入手册](docs/飞书接入手册.md) · [微信夜间流水线](wechat-pipeline/README.md) · [隐私说明](PRIVACY.md) · [更新日志](CHANGELOG.md)
 
 ```
 📩 收到验证码短信
@@ -95,6 +99,7 @@ adb shell am broadcast -a com.wj.smsforwarder.SIMULATE_SMS \
 ## 目录结构
 
 ```
+wechat-pipeline/      # 微信聊天夜间流水线（macOS，独立脚本，见其 README）
 app/src/main/java/com/wj/smsforwarder/
 ├── SmsReceiver.kt        # 系统短信广播入口（BROADCAST_SMS 权限防伪造）
 ├── SmsHandler.kt         # 共用处理链路：过滤→去重→组装→异步转发

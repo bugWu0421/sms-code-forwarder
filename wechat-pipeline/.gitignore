@@ -1,0 +1,8 @@
+# 本机私有配置（含账号目录、个人路径、身份规则）
+*.local.json
+
+# 通用产物
+**/__pycache__/
+*.py[cod]
+.DS_Store
+*.log
